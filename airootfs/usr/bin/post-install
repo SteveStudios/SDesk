@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo rm -rf /etc/profile.d/install.sh
+sudo rm -rf /etc/profile.d/setup.sh
+
+# Make sure any user named 'live' doesn't have root permissions after installation
+sudo rm -rf /etc/sudoers
+sudo mv /etc/tmpsudoers /etc/sudoers
+
+sudo rm -rf /usr/bin/post-install
+
+

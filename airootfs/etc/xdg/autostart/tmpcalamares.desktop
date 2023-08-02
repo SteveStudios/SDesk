@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install SDesk
+Name[da]=Installer SDesk
+GenericName=SDesk Installer
+GenericName[da]=Live - SDesk
+Comment=Calamares - SDesk Installer
+Comment[da]=Installer styresystemet på disk
+Comment[de]=Linux installieren
+Exec=/usr/bin/calamares_polkit %f
+Icon=sdesk
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=Qt;System;
