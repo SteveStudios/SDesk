@@ -22,7 +22,7 @@ Presentation
 
     Timer {
         id: advanceTimer
-        interval: 1000
+        interval: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
         running: presentation.activatedInCalamares
         repeat: true
         onTriggered: nextSlide()
@@ -40,11 +40,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background.horizontalCenter
             anchors.top: background.bottom
-            text: "This is a customizable QML slideshow.<br/>"+
-                  "Distributions should provide their own slideshow and list it in <br/>"+
-                  "their custom branding.desc file.<br/>"+
-                  "To create a Calamares presentation in QML, import calamares.slideshow,<br/>"+
-                  "define a Presentation element with as many Slide elements as needed."
+            text: "Thank you for choosing SDesk!<br/>"+
+                  "Your new system is now installing."
             wrapMode: Text.WordWrap
             width: presentation.width
             horizontalAlignment: Text.Center
