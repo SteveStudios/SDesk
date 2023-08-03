@@ -1,10 +1,10 @@
 # GRUB boot loader configuration
 
 GRUB_DEFAULT=0
-GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="Steve Studios"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 udev.log-priority=3 splash cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"
-GRUB_CMDLINE_LINUX="quiet loglevel=3 udev.log-priority=3 splash cryptkey=rootfs:/root/secrets/crypto_keyfile.bin"
+GRUB_TIMEOUT=0
+GRUB_DISTRIBUTOR="SDesk"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 udev.log-priority=3 splash"
+GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"

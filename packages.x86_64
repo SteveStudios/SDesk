@@ -164,7 +164,7 @@ python-yaml
 calamares
 
 # Powers the splash screen shown on boot
-plymouth
+plymouth-git
 
 # Preinstalled Applications
 libreoffice-still

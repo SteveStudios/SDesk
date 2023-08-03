@@ -47,7 +47,7 @@
 # Defaults env_keep += "XAPPLRESDIR XFILESEARCHPATH XUSERFILESEARCHPATH"
 ##
 ## Desktop path settings
-# Defaults env_keep += "QTDIR KDEDIR"
+Defaults env_keep += "QTDIR PATH QT_PLUGIN_PATH QT_INCLUDE_PATH QML2_IMPORT_PATH"
 ##
 ## Allow sudo-run commands to inherit the callers' ConsoleKit session
 # Defaults env_keep += "XDG_SESSION_COOKIE"
