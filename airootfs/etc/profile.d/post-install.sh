@@ -1,6 +1,11 @@
 #!/bin/bash
 
 if (( $EUID == 0 )) && [ ! -f "/etc/profile.d/install.sh" ]; then
+	rfkill unblock all
+	
+	# Remove calamares
+	yes | sudo pacman -R calamares | grep "hide_the-output"
+
 	# Make sure any user named 'live' doesn't have root permissions after installation
 	sudo rm -rf /etc/sudoers
 	sudo mv /etc/tmpsudoers /etc/sudoers
@@ -19,11 +24,8 @@ if (( $EUID == 0 )) && [ ! -f "/etc/profile.d/install.sh" ]; then
 	sudo rm -rf /usr/lib/os-release
 	sudo mv /usr/lib/tmpos-release /usr/lib/os-release
 	
-	systemctl start NetworkManager.service
-	systemctl enable NetworkManager.service
-		
-	systemctl start gdm
-	systemctl enable gdm
+	systemctl start NetworkManager.service | grep "hide_the-output"
+	systemctl enable NetworkManager.service | grep "hide_the-output"
 
 	sudo rm -rf /etc/profile.d/post-install.sh
 fi

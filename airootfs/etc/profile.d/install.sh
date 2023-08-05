@@ -1,4 +1,4 @@
-#!bin/bashz
+#!bin/bash
 
 if (( $EUID == 0 )); then
 	rfkill unblock all
@@ -24,21 +24,17 @@ if (( $EUID == 0 )); then
 	
 	sudo rm -rf /usr/lib/os-release
 	sudo mv /usr/lib/tmpos-release /usr/lib/os-release
-
-	systemctl set-default graphical.target
 	
-	yes | pacman -R epiphany
+	yes | pacman -R epiphany | grep "hide_the-output"
 	
 	sudo rm -rf /usr/bin/neofetch
 	sudo mv /usr/bin/tmpneofetch /usr/bin/neofetch
 	
 	sudo chmod a+x /usr/bin/neofetch
 	
-	systemctl start NetworkManager.service
-	systemctl enable NetworkManager.service
+	systemctl start NetworkManager.service | grep "hide_the-output"
+	systemctl enable NetworkManager.service | grep "hide_the-output"
 		
-	systemctl start gdm
-	systemctl enable gdm
+	systemctl start gdm | grep "hide_the-output"
+	systemctl enable gdm | grep "hide_the-output"
 fi
-	
-
