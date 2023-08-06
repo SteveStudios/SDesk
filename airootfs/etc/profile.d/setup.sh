@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if (( $EUID != 0 )) && [ -f "/etc/profile.d/install.sh" ]; then
+if (( $EUID != 0 )); then
 	dconf reset -f /org/gnome/
 	
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png
@@ -8,6 +8,5 @@ if (( $EUID != 0 )) && [ -f "/etc/profile.d/install.sh" ]; then
 		
 	xdg-settings set default-web-browser firefox.desktop
 	
-	sudo rm -rf /etc/profile.d/install.sh
 	sudo calamares
 fi

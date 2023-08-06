@@ -1,6 +1,6 @@
 NAME="SDesk"
 PRETTY_NAME="SDesk"
-ID=sdesk
+ID="sdesk"
 BUILD_ID=rolling
 ANSI_COLOR="0;38;2;60;110;180"
-LOGO=sdesk-logo
+LOGO="sdesk"

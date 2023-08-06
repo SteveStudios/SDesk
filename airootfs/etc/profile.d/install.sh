@@ -24,6 +24,9 @@ if (( $EUID == 0 )); then
 	
 	sudo rm -rf /usr/lib/os-release
 	sudo mv /usr/lib/tmpos-release /usr/lib/os-release
+
+	sudo rm -rf /etc/os-release
+	sudo mv /etc/tmpos-release /etc/os-release
 	
 	yes | pacman -R epiphany | grep "hide_the-output"
 	
@@ -31,7 +34,8 @@ if (( $EUID == 0 )); then
 	sudo mv /usr/bin/tmpneofetch /usr/bin/neofetch
 	
 	sudo chmod a+x /usr/bin/neofetch
-	
+	sudo chmod a+x /usr/bin/launch_calamares
+
 	systemctl start NetworkManager.service | grep "hide_the-output"
 	systemctl enable NetworkManager.service | grep "hide_the-output"
 		
