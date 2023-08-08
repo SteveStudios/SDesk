@@ -9,4 +9,5 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	xdg-settings set default-web-browser firefox.desktop
 
 	rm -f /etc/profile.d/setup-final.sh
+	chmod -R 700 /etc/profile.d
 fi

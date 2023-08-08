@@ -8,5 +8,8 @@ if (( $EUID != 0 )); then
 		
 	xdg-settings set default-web-browser firefox.desktop
 	
+	sudo systemctl enable bluetooth
+	sudo systemctl start bluetooth
+	
 	sudo calamares
 fi
