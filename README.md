@@ -4,7 +4,7 @@
 
 ## Building
 ### Prequisites
-- Arch Linux, SDesk or another Arch-Derived Distribution
+- Arch Linux, SDesk, or another Arch-Derived Distribution
 - The [archiso](https://archlinux.org/packages/extra/any/archiso/) package
 - OPTIONAL (But recommended): The [qemu-full](https://archlinux.org/packages/extra/x86_64/qemu-full/) package for testing the disk image
   
