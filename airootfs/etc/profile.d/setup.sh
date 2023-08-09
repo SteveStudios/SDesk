@@ -11,5 +11,7 @@ if (( $EUID != 0 )); then
 	sudo systemctl enable bluetooth
 	sudo systemctl start bluetooth
 	
+	rfkill block bluetooth
+	
 	sudo calamares
 fi

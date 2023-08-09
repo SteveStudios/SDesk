@@ -28,6 +28,9 @@ if (( $EUID == 0 )); then
 	sudo rm -rf /etc/os-release
 	sudo mv /etc/tmpos-release /etc/os-release
 	
+	sudo pacman-key --init
+	sudo pacman-key --populate
+	
 	yes | pacman -R epiphany | grep "hide_the-output"
 	
 	sudo rm -rf /usr/bin/neofetch
