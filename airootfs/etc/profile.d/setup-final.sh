@@ -2,7 +2,18 @@
 
 if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
 	dconf reset -f /org/gnome/
+
+	gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
+	gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
+
+	gnome-extensions enable add-to-desktop@tommimon.github.com	
+	gnome-extensions enable arcmenu@arcmenu.com
+	gnome-extensions enable blur-my-shell@aunetx
+	gnome-extensions enable dash-to-dock@micxgx.gmail.com	
+	gnome-extensions enable gtk4-ding@smedius.gitlab.com
 	
+	gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png
 	gsettings set org.gnome.desktop.background picture-uri-dark file:////usr/share/pixmaps/sd-bg-default.png
 

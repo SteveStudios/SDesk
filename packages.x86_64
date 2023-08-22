@@ -123,8 +123,12 @@ xfsprogs
 xl2tpd
 zsh
 
-# Desktop Environment (GNOME in this case)
+# GNOME and its Utilities
 gnome
+sdeck
+
+# Power profile support
+power-profiles-daemon
 
 # Window Managers (Wayland and XWayland)
 egl-wayland
