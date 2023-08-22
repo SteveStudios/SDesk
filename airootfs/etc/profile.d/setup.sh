@@ -3,11 +3,11 @@
 if (( $EUID != 0 )); then
 	dconf reset -f /org/gnome/
 
-	sudo chmod 777 /usr/share/gnome-shell/extensions/add-to-desktop@tommimon.github.com	
-	sudo chmod 777 /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com
-	sudo chmod 777 /usr/share/gnome-shell/extensions/blur-my-shell@aunetx
-	sudo chmod 777 /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com	
-	sudo chmod 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com
+	sudo chmod 777 /usr/share/gnome-shell/extensions/add-to-desktop@tommimon.github.com/*
+	sudo chmod 777 /usr/share/gnome-shell/extensions/arcmenu@arcmenu.com/*
+	sudo chmod 777 /usr/share/gnome-shell/extensions/blur-my-shell@aunetx/*
+	sudo chmod 777 /usr/share/gnome-shell/extensions/dash-to-dock@micxgx.gmail.com/*
+	sudo chmod 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com/*
 
 	gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
 	gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com

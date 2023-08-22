@@ -1,0 +1,58 @@
+/*
+Local file for to specify styles for desktop icons
+
+@define-color desktop_icons_bg_color @theme_selected_bg_color;
+@define-color desktop_icons_fg_color @theme_selected_fg_color;
+
+The above colors are set using javascript code in DesktopManager
+with sane fallbacks if theme_slected_colors do not exist,
+and then injected into Gdk.Display css before this file is read in and added.
+*/
+
+box > label.file-label {
+    text-shadow: 0px 0px 3px black;
+    color: white;
+}
+
+box > label.file-label-dark {
+    text-shadow: 0px 0px 3px white;
+    color: black;
+}
+
+box > #file-item {
+    padding: 2px;
+    border-radius: 5px;
+}
+
+box > #file-item:hover {
+   background-color: alpha(@desktop_icons_fg_color, 0.3);
+}
+
+box > #file-item.mimic-hovered {
+   background-color: alpha(@desktop_icons_fg_color, 0.3);
+}
+
+box > #file-item.desktop-icons-selected {
+    background-color: alpha(@desktop_icons_bg_color, 0.6);
+}
+
+.not-found {
+    color: rgb(255, 0, 0);
+}
+
+#desktopwindow.background {
+    background-color: transparent;
+}
+
+#testwindow.background{
+    background-color: black;
+}
+
+.unhighlightdroptarget:drop(active) {
+    box-shadow: none;
+}
+
+#DingAppChooser treeview {
+    min-height: 36px;
+    -gtk-icon-size: 32px;
+}
