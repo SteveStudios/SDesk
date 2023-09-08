@@ -169,8 +169,8 @@ plymouth-git
 
 # Preinstalled Applications
 libreoffice-still
-firefox
-thunderbird
+swirl
+geary
 neofetch
 nano
 python
