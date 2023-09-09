@@ -180,5 +180,9 @@ git
 binutils
 gcc
 
+# Printing Utilities
+cups
+system-config-printer
+
 # Network Utilities
 networkmanager
