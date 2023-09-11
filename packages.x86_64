@@ -151,7 +151,7 @@ kparts
 kpmcore
 plasma-framework
 boost
-boost-libs
+boost-libs 
 appstream-qt
 libatasmart
 libpwquality
@@ -163,6 +163,9 @@ ckbcomp
 mkinitcpio-openswap
 python-yaml
 calamares
+
+# Device Security Utilities
+fwupd
 
 # Powers the splash screen shown on boot
 plymouth-git
