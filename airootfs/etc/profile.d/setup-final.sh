@@ -9,7 +9,7 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
 	gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
 	
-	gnome-extensions enable extensions/appindicatorsupport@rgcjonas.gmail.com
+	gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 	gnome-extensions enable gtk4-ding@smedius.gitlab.com
 	
 	gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
