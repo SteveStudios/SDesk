@@ -151,13 +151,13 @@ kparts
 kpmcore
 plasma-framework
 boost
-boost-libs 
+boost-libs
 appstream-qt
 libatasmart
 libpwquality
 solid
-udisks2
 yaml-cpp
+udisks2
 polkit
 ckbcomp
 mkinitcpio-openswap
@@ -179,9 +179,15 @@ nano
 python
 git
 
+# Pacman Utilities
+fakeroot
+
 # Essential GNU Utilities
 binutils
 gcc
+
+#SDeck Dependencies
+gnome-terminal
 
 # Printing Utilities
 cups
@@ -189,3 +195,6 @@ system-config-printer
 
 # Network Utilities
 networkmanager
+
+# Qt Utilities
+qt6-5compat
