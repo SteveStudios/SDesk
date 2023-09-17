@@ -3,17 +3,6 @@
 if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
 	dconf reset -f /org/gnome/
 
-	sudo chmod 777 /usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/*
-	sudo chmod 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com/*
-
-	gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
-	gnome-extensions enable apps-menu@gnome-shell-extensions.gcampax.github.com
-	
-	gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
-	gnome-extensions enable gtk4-ding@smedius.gitlab.com
-	
-	gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
-
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png
 	gsettings set org.gnome.desktop.background picture-uri-dark file:////usr/share/pixmaps/sd-bg-default.png
 

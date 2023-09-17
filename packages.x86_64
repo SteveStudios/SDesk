@@ -125,7 +125,6 @@ zsh
 
 # GNOME and its Utilities
 gnome
-sdeck
 
 # Power profile support
 power-profiles-daemon
@@ -185,9 +184,6 @@ fakeroot
 # Essential GNU Utilities
 binutils
 gcc
-
-#SDeck Dependencies
-gnome-terminal
 
 # Printing Utilities
 cups
