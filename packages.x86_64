@@ -178,6 +178,13 @@ nano
 python
 git
 
+# Flatpak Utilities
+flatpak
+
+# Network Utilities
+wget
+curl
+
 # Pacman Utilities
 fakeroot
 
