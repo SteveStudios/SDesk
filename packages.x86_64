@@ -126,6 +126,7 @@ zsh
 # GNOME and its Utilities
 gnome
 gst-plugin-pipewire
+gst-plugins-good
 
 # Power profile support
 power-profiles-daemon
