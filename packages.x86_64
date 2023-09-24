@@ -131,12 +131,15 @@ gst-plugins-good
 # Power profile support
 power-profiles-daemon
 
-# Window Managers (Wayland and XWayland)
+# Windowing Systems and GUI Toolkits (Wayland, XWayland, Qt5, Qt6, glfw, glew, etc.)
 egl-wayland
 glfw-wayland
+qt5-wayland
+qt6-wayland
 wayland
 wayland-protocols
 xorg-xwayland
+glew
 
 # Calamares installer
 qt5ct
