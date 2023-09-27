@@ -131,11 +131,9 @@ gst-plugins-good
 # Power profile support
 power-profiles-daemon
 
-# Windowing Systems and GUI Toolkits (Wayland, XWayland, Qt5, Qt6, glfw, glew, etc.)
+# Windowing Systems and GUI Toolkits (Wayland, XWayland, glfw, glew, etc.)
 egl-wayland
 glfw-wayland
-qt5-wayland
-qt6-wayland
 wayland
 wayland-protocols
 xorg-xwayland
