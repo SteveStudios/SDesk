@@ -17,6 +17,7 @@ sudo chmod a+x /usr/bin/neofetch
 sudo rm -rf /usr/lib/os-release
 sudo mv /usr/lib/tmpos-release /usr/lib/os-release
 	
+systemctl enable cups.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"
 systemctl enable gdm | grep "hide_the-output"
 
