@@ -128,6 +128,9 @@ gnome
 gst-plugin-pipewire
 gst-plugins-good
 
+#SShell Utilities
+mplayer
+
 # Power profile support
 power-profiles-daemon
 
@@ -141,7 +144,6 @@ glew
 
 # Calamares installer
 qt5ct
-qqc2-desktop-style
 polkit-qt5
 kconfig
 kcoreaddons
@@ -180,7 +182,9 @@ neofetch
 nano
 python
 git
+gnome-terminal
 gnome-boxes
+octopi
 
 # Flatpak Utilities
 flatpak
@@ -191,10 +195,12 @@ curl
 
 # Pacman Utilities
 fakeroot
+pacman-contrib
 
 # Essential GNU Utilities
 binutils
 gcc
+make
 
 # Printing Utilities
 cups

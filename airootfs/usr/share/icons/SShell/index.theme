@@ -1,0 +1,5 @@
+[Icon Theme]
+Name=SSHell
+Comment=SSHell cursors combined with the Moka Icon Set
+Example=folder
+Inherits=hicolor

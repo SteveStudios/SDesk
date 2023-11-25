@@ -27,17 +27,27 @@ if (( $EUID == 0 )); then
 
 	sudo rm -rf /etc/os-release
 	sudo mv /etc/tmpos-release /etc/os-release
+
+	sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
+	sudo mv /usr/share/gnome-shell/tmpgnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
 	
 	sudo pacman-key --init | grep "hide_the-output"
 	sudo pacman-key --populate | grep "hide_the-output"
 	
 	yes | pacman -R epiphany | grep "hide_the-output"
-	
+	yes | pacman -R gnome-console | grep "hide_the-output"
+	yes | pacman -R gnome-software | grep "hide_the-output"
+
 	sudo rm -rf /usr/bin/neofetch
 	sudo mv /usr/bin/tmpneofetch /usr/bin/neofetch
 	
 	sudo chmod a+x /usr/bin/neofetch
 	sudo chmod a+x /usr/bin/launch_calamares
+
+	dconf reset -f /org/gnome/
+	
+	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
+	sudo dconf update
 
 	systemctl start NetworkManager.service | grep "hide_the-output"
 	systemctl enable NetworkManager.service | grep "hide_the-output"
