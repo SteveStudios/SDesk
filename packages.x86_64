@@ -143,29 +143,7 @@ xorg-xwayland
 glew
 
 # Calamares installer
-qt5ct
-polkit-qt5
-kconfig
-kcoreaddons
-kdbusaddons
-kwidgetsaddons
-ki18n
-kpackage
-kparts
-kpmcore
-plasma-framework
-boost
-boost-libs
-appstream-qt
-libatasmart
-libpwquality
-solid
-yaml-cpp
-udisks2
-polkit
-ckbcomp
 mkinitcpio-openswap
-python-yaml
 calamares
 
 # Device Security Utilities

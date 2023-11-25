@@ -45,6 +45,8 @@ if (( $EUID == 0 )); then
 	sudo chmod a+x /usr/bin/launch_calamares
 
 	dconf reset -f /org/gnome/
+
+	sudo chmod -R 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com
 	
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 	sudo dconf update
