@@ -21,8 +21,9 @@ if (( $EUID != 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/running-indicator-style "'SQUARES'"
 	dconf write /org/gnome/shell/extensions/dash-to-dock/always-center-icons true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
+	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
 
-    dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
+        dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
 	dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 	

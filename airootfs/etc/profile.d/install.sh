@@ -46,9 +46,10 @@ if (( $EUID == 0 )); then
 
 	dconf reset -f /org/gnome/
 
-	sudo chmod -R 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com
+	sudo chmod -R 777 /usr/share/gnome-shell/extensions
 	
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
+	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
 	sudo dconf update
 
 	systemctl start NetworkManager.service | grep "hide_the-output"

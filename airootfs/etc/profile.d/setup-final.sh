@@ -2,7 +2,6 @@
 
 if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
-	dconf update
 	
 	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 	
@@ -21,8 +20,9 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	dconf write /org/gnome/shell/extensions/dash-to-dock/running-indicator-style "'SQUARES'"
 	dconf write /org/gnome/shell/extensions/dash-to-dock/always-center-icons true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
+	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
 
-    dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
+        dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
 	dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 
@@ -44,5 +44,5 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 
 	rm -f /etc/profile.d/setup-final.sh
 	chmod -R 755 /etc/profile.d
-	chmod -R 777 /usr/share/gnome-shell/extensions/gtk4-ding@smedius.gitlab.com
+	chmod -R 777 /usr/share/gnome-shell/extensions
 fi

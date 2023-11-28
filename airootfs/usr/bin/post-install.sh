@@ -16,6 +16,12 @@ sudo chmod a+x /usr/bin/neofetch
 
 sudo rm -rf /usr/lib/os-release
 sudo mv /usr/lib/tmpos-release /usr/lib/os-release
+
+gsettings set org.gnome.desktop.interface icon-theme 'Arc'
+gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
+
+dconf write /org/gnome/shell/extensions/user-theme/name "'SShell'"
+sudo dconf update
 	
 systemctl enable cups.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"

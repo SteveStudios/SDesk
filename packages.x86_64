@@ -128,7 +128,8 @@ gnome
 gst-plugin-pipewire
 gst-plugins-good
 
-#SShell Utilities
+#SShell and its Utilities
+sshell
 mplayer
 
 # Power profile support
