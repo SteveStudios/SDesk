@@ -23,7 +23,7 @@ if (( $EUID != 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
 
-        dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
+	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
 	dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 	
@@ -42,6 +42,8 @@ if (( $EUID != 0 )); then
  	gsettings set org.gnome.shell favorite-apps "['calamares.desktop', 'swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']"
 
 	xdg-settings set default-web-browser swirl.desktop
+
+	sudo chmod 777 /etc/profile.d/setup-final.sh
 
 	sudo systemctl start cups.service
 	sudo systemctl enable cups.service

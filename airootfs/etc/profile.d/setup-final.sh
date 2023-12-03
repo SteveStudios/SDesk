@@ -42,7 +42,10 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 		
 	xdg-settings set default-web-browser swirl.desktop
 
-	rm -- "$0"
-	chmod -R 755 /etc/profile.d
-	chmod -R 777 /usr/share/gnome-shell/extensions
+	rm -rf /etc/profile.d/setup-final.sh
+
+	if [ ! -f "/etc/profile.d/setup-final.sh" ]; then
+		chmod -R 755 /etc/profile.d
+		chmod -R 777 /usr/share/gnome-shell/extensions
+	fi
 fi
