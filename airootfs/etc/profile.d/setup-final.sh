@@ -12,6 +12,7 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	gnome-extensions enable gtk4-ding@smedius.gitlab.com
 	gnome-extensions enable just-perfection-desktop@just-perfection
 	gnome-extensions enable blur-my-shell@aunetx
+	gnome-extensions enable tiling-assistant@leleat-on-github
 	
 	dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/show-apps-at-top true

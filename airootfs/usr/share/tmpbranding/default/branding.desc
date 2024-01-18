@@ -121,7 +121,7 @@ navigation: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         "@{NAME}"
+    productName:         "SDesk"
     shortProductName:    SDesk
     version:             Rolling
     shortVersion:        Rolling
@@ -176,10 +176,10 @@ images:
 # branding component also ships a stylesheet.qss. Then they are
 # the corresponding CSS attributes of #sidebarApp.
 style:
-   sidebarBackground:    "#333333"
-   sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#333333"
-   sidebarTextHighlight: "#1793D1"
+   SidebarBackground:        "#333333"
+   SidebarText:              "#FFFFFF"
+   SidebarTextCurrent:       "#333333"
+   SidebarBackgroundCurrent: "#1793D1"
 
 ### SLIDESHOW
 #
