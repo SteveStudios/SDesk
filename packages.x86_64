@@ -144,24 +144,16 @@ xorg-xwayland
 glew
 
 # Calamares installer
-qt5ct
-qqc2-desktop-style
-polkit-qt5
-kconfig
-kcoreaddons
-kdbusaddons
-kwidgetsaddons
-ki18n
-kcrash5
-kpackage
-kparts
+ckbcomp
+efibootmgr
+gtk-update-icon-cache
+hwinfo
+icu
 kpmcore
-boost
-boost-libs
-appstream-qt
-libatasmart
 libpwquality
-solid
+kcrash5
+qt5-svg
+squashfs-tools
 yaml-cpp
 ckbcomp
 mkinitcpio-openswap
