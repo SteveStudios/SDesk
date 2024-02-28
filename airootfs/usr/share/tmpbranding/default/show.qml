@@ -39,8 +39,8 @@ Presentation
         Text {
             anchors.horizontalCenter: background.horizontalCenter
             anchors.top: background.bottom
-            text: "Thank you for choosing SDesk!<br/>"+
-                  "Your new system is now installing."
+            text: qsTr("Thank you for choosing SDesk!<br/>"+
+                  "Your new system is now installing.")
             wrapMode: Text.WordWrap
             width: presentation.width
             horizontalAlignment: Text.Center

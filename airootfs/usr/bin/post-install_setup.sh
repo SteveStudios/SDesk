@@ -13,7 +13,9 @@ gnome-extensions enable gtk4-ding@smedius.gitlab.com
 gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable tiling-assistant@leleat-on-github
-
+gnome-extensions enable arch-update@RaphaelRochet
+	
+dconf write /org/gnome/shell/extensions/arch-update/notify true
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
 dconf write /org/gnome/shell/extensions/dash-to-dock/show-apps-at-top true
 dconf write /org/gnome/shell/extensions/dash-to-dock/custom-theme-shrink true
@@ -27,7 +29,7 @@ dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-shoul
 dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
 dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 
-gsettings set org.gnome.desktop.interface icon-theme 'Arc'
+gsettings set org.gnome.desktop.interface icon-theme 'kora'
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
 dconf write /org/gnome/shell/extensions/user-theme/name "'SShell'"

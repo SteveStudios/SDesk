@@ -20,7 +20,7 @@ sudo mv /usr/lib/tmpos-release /usr/lib/os-release
 sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
 sudo mv /usr/share/gnome-shell/tmpgnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
 
-gsettings set org.gnome.desktop.interface icon-theme 'Arc'
+gsettings set org.gnome.desktop.interface icon-theme 'kora'
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
 dconf write /org/gnome/shell/extensions/user-theme/name "'SShell'"
