@@ -14,6 +14,7 @@ gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable tiling-assistant@leleat-on-github
 gnome-extensions enable arch-update@RaphaelRochet
+gnome-extensions enable desktop-cube@schneegans.github.com
 	
 dconf write /org/gnome/shell/extensions/arch-update/notify true
 dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
