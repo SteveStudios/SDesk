@@ -15,6 +15,7 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	gnome-extensions enable tiling-assistant@leleat-on-github
 	gnome-extensions enable arch-update@RaphaelRochet
 	gnome-extensions enable desktop-cube@schneegans.github.com
+	gnome-extensions enable blurmylightshell@dikasp.gitlab
 	
 	dconf write /org/gnome/shell/extensions/arch-update/notify true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height true
@@ -33,11 +34,10 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 	gsettings set org.gnome.desktop.interface icon-theme 'kora'
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
-	dconf write /org/gnome/shell/extensions/user-theme/name "'SShell'"
-
 	dconf write /org/gnome/shell/extensions/blur-my-shell/hacks-level 3
 	dconf write /org/gnome/shell/extensions/blur-my-shell/dash-to-dock/blur true
 	dconf write /org/gnome/shell/extensions/blur-my-shell/panel/style-panel 1
+	dconf write /org/gnome/shell/extensions/blur-my-shell/dash-to-dock/static-blur false
 
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png
 	gsettings set org.gnome.desktop.background picture-uri-dark file:////usr/share/pixmaps/sd-bg-default.png
