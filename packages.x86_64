@@ -114,7 +114,6 @@ usbutils
 vi
 virtualbox-guest-utils-nox
 vpnc
-wezterm-terminfo
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -128,7 +127,7 @@ gnome
 gst-plugin-pipewire
 gst-plugins-good
 
-#SShell and its Utilities
+# SShell and its Utilities
 sshell
 mplayer
 
@@ -187,6 +186,7 @@ curl
 # Pacman Utilities
 fakeroot
 pacman-contrib
+debugedit
 
 # Essential GNU Utilities
 binutils
@@ -202,3 +202,15 @@ networkmanager
 
 # Qt Utilities
 qt6-5compat
+
+# Default Kernel
+linux-zen
+linux-zen-headers
+
+# For VMs
+spice-vdagent
+qemu-guest-agent
+phodav
+
+# For Welcome videos
+mpv

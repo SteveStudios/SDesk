@@ -3,7 +3,7 @@
 
 iso_name="sdesk"
 iso_label="SDESK_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="SDesk <https://stevestudios.ca>"
+iso_publisher="SDesk <https://stevestudios.net>"
 iso_application="SDesk Live/Rescue CD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="sdesk"

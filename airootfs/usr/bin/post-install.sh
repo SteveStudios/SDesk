@@ -17,13 +17,10 @@ sudo chmod a+x /usr/bin/neofetch
 sudo rm -rf /usr/lib/os-release
 sudo mv /usr/lib/tmpos-release /usr/lib/os-release
 
-sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
-sudo mv /usr/share/gnome-shell/tmpgnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
-
 gsettings set org.gnome.desktop.interface icon-theme 'kora'
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
-dconf write /org/gnome/shell/extensions/user-theme/name "'SShell'"
+dconf write /org/gnome/shell/extensions/user-theme/name "'Default'"
 sudo dconf update
 	
 systemctl enable cups.service | grep "hide_the-output"

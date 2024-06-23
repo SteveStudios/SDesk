@@ -27,9 +27,6 @@ if (( $EUID == 0 )); then
 
 	sudo rm -rf /etc/os-release
 	sudo mv /etc/tmpos-release /etc/os-release
-
-	sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
-	sudo mv /usr/share/gnome-shell/tmpgnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
 	
 	sudo pacman-key --init | grep "hide_the-output"
 	sudo pacman-key --populate | grep "hide_the-output"
