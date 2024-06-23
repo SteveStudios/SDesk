@@ -2,6 +2,8 @@
 
 # This is the repository for the SDesk ISO Source code, It includes all of the packages and files required to build a custom SDesk disk image.
 
+You can get a prebuilt ISO at: _https://archive.org/details/sdesk-2024.06.22-x86_64_
+
 ## Building
 ### Prequisites
 - Arch Linux, SDesk, or another Arch-Derived Distribution
