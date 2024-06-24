@@ -48,5 +48,5 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 		chmod -R 777 /usr/share/gnome-shell/extensions
 	fi
 
-	mpv --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4
+	mpv --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4 & disown
 fi
