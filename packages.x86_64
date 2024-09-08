@@ -206,7 +206,7 @@ networkmanager
 
 # Qt Utilities
 qt6-5compat
-adwaita-qt6
+adwaita-qt
 
 # Default Kernel
 linux-zen
