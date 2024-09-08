@@ -1,0 +1,7 @@
+[Plymouth Theme]
+Name=Static Logo
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/staticlogo
+ImageFile=logo.png

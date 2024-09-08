@@ -48,10 +48,14 @@ kitty-terminfo
 less
 libfido2
 libusb-compat
-linux
 linux-atm
 linux-firmware
+linux-firmware-bnx2x
+linux-firmware-liquidio
 linux-firmware-marvell
+linux-firmware-mellanox
+linux-firmware-nfp
+linux-firmware-qlogic
 livecd-sounds
 lsscsi
 lvm2
@@ -126,6 +130,7 @@ zsh
 gnome
 gst-plugin-pipewire
 gst-plugins-good
+gnome-initial-setup
 
 # SShell and its Utilities
 sshell
@@ -162,13 +167,12 @@ calamares
 fwupd
 
 # Powers the splash screen shown on boot
-plymouth-git
+plymouth
 
 # Preinstalled Applications
 libreoffice-still
 swirl
 geary
-neofetch
 nano
 python
 git
@@ -202,6 +206,7 @@ networkmanager
 
 # Qt Utilities
 qt6-5compat
+adwaita-qt6
 
 # Default Kernel
 linux-zen

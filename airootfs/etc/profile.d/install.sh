@@ -36,10 +36,6 @@ if (( $EUID == 0 )); then
 	yes | pacman -R gnome-software | grep "hide_the-output"
 	yes | pacman -Rdd qt6-wayland | grep "hide_the-output"
 
-	sudo rm -rf /usr/bin/neofetch
-	sudo mv /usr/bin/tmpneofetch /usr/bin/neofetch
-	
-	sudo chmod a+x /usr/bin/neofetch
 	sudo chmod a+x /usr/bin/launch_calamares
 
 	dconf reset -f /org/gnome/

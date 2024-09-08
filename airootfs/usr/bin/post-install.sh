@@ -9,11 +9,6 @@ sudo rm -rf /usr/share/tmpcalamares.desktop
 sudo rm -rf /usr/share/tmpbranding
 sudo rm -rf /usr/share/tmpmodules
 
-sudo rm -rf /usr/bin/neofetch
-sudo mv /usr/bin/tmpneofetch /usr/bin/neofetch
-	
-sudo chmod a+x /usr/bin/neofetch
-
 sudo rm -rf /usr/lib/os-release
 sudo mv /usr/lib/tmpos-release /usr/lib/os-release
 
@@ -26,5 +21,7 @@ sudo dconf update
 systemctl enable cups.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"
 systemctl enable gdm | grep "hide_the-output"
+
+mpv --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4
 
 sudo rm -rf /usr/bin/post-install.sh

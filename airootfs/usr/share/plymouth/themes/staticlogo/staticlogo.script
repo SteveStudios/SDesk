@@ -1,0 +1,17 @@
+image_dir = ImageDir;
+image_file = ImageFile;
+
+function Init() {
+    Plymouth.SetBackgroundColor("black");
+    Plymouth.SetBackgroundImage(image_dir + "/" + image_file);
+    Plymouth.SetBackgroundImageSize("stretch");
+}
+
+function Draw() {
+    Plymouth.Clear();
+    Plymouth.DrawImage(image_dir + "/" + image_file, 0, 0);
+}
+
+function Update() {
+}
+
