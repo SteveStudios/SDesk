@@ -47,4 +47,6 @@ if (( $EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/prof
 		chmod -R 755 /etc/profile.d
 		chmod -R 777 /usr/share/gnome-shell/extensions
 	fi
+elif (( $EUID == 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ];
+	mpv --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4
 fi

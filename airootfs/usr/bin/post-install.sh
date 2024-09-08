@@ -22,6 +22,4 @@ systemctl enable cups.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"
 systemctl enable gdm | grep "hide_the-output"
 
-mpv --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4
-
 sudo rm -rf /usr/bin/post-install.sh
