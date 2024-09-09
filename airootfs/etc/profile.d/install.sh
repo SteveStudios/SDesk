@@ -22,12 +22,6 @@ if (( $EUID == 0 )); then
 	sudo rm -rf /usr/share/calamares/settings.conf
 	sudo mv /usr/share/tmpsettings.conf /usr/share/calamares/settings.conf
 	
-	sudo rm -rf /usr/lib/os-release
-	sudo mv /usr/lib/tmpos-release /usr/lib/os-release
-
-	sudo rm -rf /etc/os-release
-	sudo mv /etc/tmpos-release /etc/os-release
-	
 	sudo pacman-key --init | grep "hide_the-output"
 	sudo pacman-key --populate | grep "hide_the-output"
 	

@@ -1,0 +1,10 @@
+[Unit]
+Description=Plays the SDesk welcome video and sets up GNOME
+Before=gdm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/setup-final.sh
+
+[Install]
+WantedBy=default.target
