@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Make sure any user named 'live' doesn't have root permissions after installation
-sudo mv /etc/tmpsudoers /etc/sudoers
 
 sudo rm -rf /usr/share/tmpsettings.conf
 sudo rm -rf /usr/share/tmpcalamares.desktop

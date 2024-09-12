@@ -1,6 +1,18 @@
-#!/bin/bash
+if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ ! -f "/usr/share/applications/gnome-initial-setup.desktop" ]; then
+	sudo rm -rf /etc/profile.d/setup-final.sh
+	sudo rm -rf /etc/profile.d/setup-post.sh
 
-if (( EUID != 0 )); then
+	sudo rm -rf /etc/gdm/custom.conf
+	sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf
+
+	if [ "$USER" != "live" ]; then
+		sudo userdel -f live
+	fi
+	
+	sudo pkill mplayer
+	
+	sudo mv /etc/tmpsudoers /etc/sudoers
+
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 	sudo dconf update
 	
@@ -10,7 +22,7 @@ if (( EUID != 0 )); then
 	gnome-extensions enable add-to-desktop@tommimon.github.com
 	gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 	gnome-extensions enable dash-to-dock@micxgx.gmail.com
-	gnome-extensions disable gtk4-ding@smedius.gitlab.com
+	gnome-extensions enable gtk4-ding@smedius.gitlab.com
 	gnome-extensions enable just-perfection-desktop@just-perfection
 	gnome-extensions enable light-style@gnome-shell-extensions.gcampax.github.com
 	gnome-extensions enable tiling-assistant@leleat-on-github
@@ -27,8 +39,8 @@ if (( EUID != 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
     dconf write /org/gnome/shell/extensions/dash-to-dock/transparency-mode "'FIXED'"
 	dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.6
-	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
-    dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
+    dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true
+    dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide true
 
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
@@ -43,14 +55,4 @@ if (( EUID != 0 )); then
  	gsettings set org.gnome.shell favorite-apps "['calamares.desktop', 'swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']"
 
 	xdg-settings set default-web-browser swirl.desktop
-
-	sudo systemctl start cups.service
-	sudo systemctl enable cups.service
-	
-	sudo systemctl enable bluetooth
-	sudo systemctl start bluetooth
-	
-	rfkill block bluetooth
-	
-	sudo calamares
 fi
