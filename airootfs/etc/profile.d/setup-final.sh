@@ -1,6 +1,13 @@
 #!/bin/bash
 
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ -f "/usr/share/applications/gnome-initial-setup.desktop" ]; then
+    trap '' SIGINT
+    trap '' SIGTERM
+    
+    while ! pgrep -x "gnome-shell" > /dev/null; do
+        sleep 1
+    done
+
     gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
     gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 	
