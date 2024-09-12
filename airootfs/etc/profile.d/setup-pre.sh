@@ -4,10 +4,6 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
     trap '' SIGINT
     trap '' SIGTERM
 
-    while ! pgrep -x "gnome-shell" > /dev/null; do
-        sleep 1
-    done
-    
     mplayer /usr/local/share/Welcome_SDESK19.mp3 -loop 0 &
     mpv --ontop --osc=no --fullscreen --on-all-workspaces /usr/local/share/Welcome_SDESK19.mp4 &
 
