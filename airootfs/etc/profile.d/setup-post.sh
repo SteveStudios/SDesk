@@ -1,17 +1,5 @@
-if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ ! -f "/usr/share/applications/gnome-initial-setup.desktop" ]; then
-	sudo rm -rf /etc/profile.d/setup-final.sh
+if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ ! -f "/usr/bin/setup-final.sh" ]; then
 	sudo rm -rf /etc/profile.d/setup-post.sh
-
-	sudo rm -rf /etc/gdm/custom.conf
-	sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf
-
-	if [ "$USER" != "live" ]; then
-		sudo userdel -f live
-	fi
-	
-	sudo pkill mplayer
-	
-	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 	sudo dconf update
