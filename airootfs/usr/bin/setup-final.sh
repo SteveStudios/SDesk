@@ -55,6 +55,6 @@ trap 'exit' SIGINT
 trap 'exit' SIGTERM
 
 sudo usermod -a -G wheel live 
-sudo /usr/lib/gnome-initial-setup &
+sudo /usr/lib/gnome-initial-setup
 
-sudo rm -rf /usr/share/applications/gnome-initial-setup.desktop && sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo userdel -f live && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && sudo mv /etc/tmpsudoers /etc/sudoers && killall -3 gnome-shell
+sudo rm -rf /usr/share/applications/gnome-initial-setup.desktop && sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo userdel -f live && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && suzdo mv /etc/tmpsudoers /etc/sudoers && killall -3 gnome-shell
