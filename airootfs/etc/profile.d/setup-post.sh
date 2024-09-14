@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ ! -f "/usr/bin/setup-final.sh" ]; then
 	sudo rm -rf /etc/profile.d/setup-post.sh
 
