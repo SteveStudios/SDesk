@@ -48,13 +48,11 @@ fi
 sudo chmod -R 755 /etc/profile.d
 sudo chmod -R 777 /usr/share/gnome-shell/extensions
 
-sudo /usr/lib/gnome-initial-setup &
+sudo /usr/lib/gnome-initial-setup &> /tmp/gnome_initial_setup.log &
 
-while ! xdotool search --name "Initial Setup" > /dev/null; do
-    sleep 0.1
-done
+PROCESS_PID=$!
 
-while xdotool search --name "Initial Setup" > /dev/null; do
+while grep -q "No GDM connection; not initiating login" /tmp/gnome_initial_setup.log; do
     sleep 0.1
 done
 
