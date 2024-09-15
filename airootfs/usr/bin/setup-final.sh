@@ -59,4 +59,4 @@ while xdotool search --name "Initial Setup" > /dev/null; do
 done
 
 sudo pkill /usr/lib/gnome-initial-setup
-sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && sudo cp /var/lib/AccountsService/users/gdm /var/lib/AccountsService/users/live && killall -3 gnome-shell
+sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && killall -3 gnome-shell
