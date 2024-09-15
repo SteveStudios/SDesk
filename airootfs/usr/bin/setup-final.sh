@@ -1,8 +1,5 @@
 #!/bin/bash
 
-trap '' SIGINT
-trap '' SIGTERM
-
 gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 	
@@ -51,10 +48,15 @@ fi
 sudo chmod -R 755 /etc/profile.d
 sudo chmod -R 777 /usr/share/gnome-shell/extensions
 
-trap 'exit' SIGINT
-trap 'exit' SIGTERM
+sudo /usr/lib/gnome-initial-setup &
 
-sudo usermod -a -G wheel live 
-sudo /usr/lib/gnome-initial-setup
+while ! xdotool search --name "Initial Setup" > /dev/null; do
+    sleep 0.1
+done
 
-sudo rm -rf /usr/share/applications/gnome-initial-setup.desktop && sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo userdel -f live && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && suzdo mv /etc/tmpsudoers /etc/sudoers && killall -3 gnome-shell
+while xdotool search --name "Initial Setup" > /dev/null; do
+    sleep 0.1
+done
+
+sudo pkill /usr/lib/gnome-initial-setup
+sudo pkill mplayer && sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && killall -3 gnome-shell

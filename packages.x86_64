@@ -140,13 +140,17 @@ mplayer
 # Power profile support
 power-profiles-daemon
 
-# Windowing Systems and GUI Toolkits (Wayland, XWayland, glfw, glew, etc.)
+# Windowing Systems, their Extensions, Utilities, and GUI Toolkits (Wayland, XWayland, glfw, glew, etc.)
 egl-wayland
 glfw-wayland
 wayland
 wayland-protocols
 xorg-xwayland
 glew
+xorg-xrandr
+autorandr
+mutter-x11-scaling
+xdotool
 
 # Calamares installer
 ckbcomp
