@@ -52,7 +52,7 @@ sudo /usr/lib/gnome-initial-setup &> /tmp/gnome_initial_setup.log &
 
 PROCESS_PID=$!
 
-while grep -q "No GDM connection; not initiating login" /tmp/gnome_initial_setup.log; do
+while ! sudo grep -q "No GDM connection; not initiating login" /tmp/gnome_initial_setup.log; do
     sleep 0.1
 done
 
