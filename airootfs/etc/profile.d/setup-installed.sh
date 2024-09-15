@@ -1,6 +1,8 @@
 #!/bin/bash
 
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
+	sudo rm -rf /etc/profile.d/setup-installed.sh
+
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 	sudo dconf update
 	

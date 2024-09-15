@@ -9,8 +9,6 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
-	sudo dconf update
-	
 	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 	
 	gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
