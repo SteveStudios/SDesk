@@ -2,7 +2,6 @@
 alsa-utils
 amd-ucode
 arch-install-scripts
-archinstall
 b43-fwcutter
 base
 bind
@@ -170,6 +169,8 @@ calamares
 
 # Device Security Utilities
 fwupd
+hardened_malloc
+firejail
 
 # Powers the splash screen shown on boot
 plymouth
@@ -191,11 +192,13 @@ flatpak
 # Network Utilities
 wget
 curl
+firewalld
 
 # Pacman Utilities
 fakeroot
 pacman-contrib
 debugedit
+patch
 
 # Essential GNU Utilities
 binutils
@@ -222,9 +225,6 @@ spice-vdagent
 qemu-guest-agent
 phodav
 
-# For Welcome videos
-mpv
-
 # Japanese Fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-serif-jp-fonts
@@ -240,3 +240,45 @@ xf86-input-libinput
 xf86-input-elographics
 xf86-input-libinput
 xorg-xinput
+
+# Accessibility
+orca
+
+# Java
+java-runtime-common
+
+# SELinux
+libsepol
+libselinux
+secilc
+checkpolicy
+setools
+libsemanage
+semodule-utils
+policycoreutils
+selinux-dbus-config
+selinux-gui
+selinux-python
+selinux-sandbox
+mcstrans
+restorecond
+selinux-alpm-hook
+pambase-selinux
+pam-selinux
+coreutils-selinux 
+shadow-selinux 
+cronie-selinux 
+sudo-selinux
+util-linux-selinux
+systemd-selinux
+logrotate-selinux
+dbus-selinux
+openssh-selinux 
+findutils-selinux 
+iproute2-selinux 
+psmisc-selinux
+selinux-refpolicy-arch
+
+# Other
+fuse3
+fuse-zip

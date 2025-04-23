@@ -28,7 +28,6 @@ Presentation
     }
 
     Slide {
-
         Image {
             id: background
             source: "squid.png"

@@ -28,7 +28,7 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
 	dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
     dconf write /org/gnome/shell/extensions/dash-to-dock/transparency-mode "'FIXED'"
-	dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.6
+	dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.5
 	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
 
@@ -36,7 +36,7 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
 	dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 	
-	gsettings set org.gnome.desktop.interface icon-theme 'kora'
+	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png
