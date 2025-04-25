@@ -279,6 +279,15 @@ iproute2-selinux
 psmisc-selinux
 selinux-refpolicy-arch
 
+# Development
+lua51
+luajit
+luarocks
+lua-sec
+cvs
+mercurial
+# sdesk-sdk
+
 # Other
 fuse3
 fuse-zip
