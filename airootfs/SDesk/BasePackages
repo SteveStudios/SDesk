@@ -1,3 +1,9 @@
+[remove] python
+[remove] plymouth-git
+[remove] sudo
+[remove] base
+
+base-selinux
 gst-plugin-pipewire
 gst-plugins-good
 fprintd
@@ -50,35 +56,5 @@ xf86-input-libinput
 xorg-xinput
 orca
 java-runtime-common
-libsepol
-libselinux
-secilc
-checkpolicy
-setools
-libsemanage
-semodule-utils
-policycoreutils
-selinux-dbus-config
-selinux-gui
-selinux-python
-selinux-sandbox
-mcstrans
-restorecond
-selinux-alpm-hook
-pambase-selinux
-pam-selinux
-coreutils-selinux
-shadow-selinux
-cronie-selinux
-sudo-selinux
-util-linux-selinux
-systemd-selinux
-logrotate-selinux
-dbus-selinux
-openssh-selinux
-findutils-selinux
-iproute2-selinux
-psmisc-selinux
-selinux-refpolicy-arch
 fuse3
 fuse-zip

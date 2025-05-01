@@ -3,7 +3,7 @@ alsa-utils
 amd-ucode
 arch-install-scripts
 b43-fwcutter
-base
+base-selinux
 bind
 brltty
 broadcom-wl
@@ -30,7 +30,6 @@ f2fs-tools
 fatresize
 foot-terminfo
 fsarchiver
-gnu-netcat
 gpart
 gpm
 gptfdisk
@@ -91,7 +90,6 @@ pv
 qemu-guest-agent
 refind
 reflector
-reiserfsprogs
 rp-pppoe
 rsync
 rxvt-unicode-terminfo
@@ -245,35 +243,6 @@ orca
 java-runtime-common
 
 # SELinux
-libsepol
-libselinux
-secilc
-checkpolicy
-setools
-libsemanage
-semodule-utils
-policycoreutils
-selinux-dbus-config
-selinux-gui
-selinux-python
-selinux-sandbox
-mcstrans
-restorecond
-selinux-alpm-hook
-pambase-selinux
-pam-selinux
-coreutils-selinux 
-shadow-selinux 
-cronie-selinux 
-sudo-selinux
-util-linux-selinux
-systemd-selinux
-logrotate-selinux
-dbus-selinux
-openssh-selinux 
-findutils-selinux 
-iproute2-selinux 
-psmisc-selinux
 selinux-refpolicy-arch
 
 # Development

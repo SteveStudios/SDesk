@@ -8,6 +8,8 @@ import subprocess
 
 import alpm
 
+from urllib import request
+
 DB_LOCK_FILE: str = "/var/lib/pacman/db.lck"
 
 # Twenty Minutes
@@ -30,6 +32,13 @@ while pacman_in_use() and seconds_waited < TIMEOUT_SECS:
     time.sleep(1)
     seconds_waited += 1
 
+def internet_on():
+    try:
+        request.urlopen('https://www.google.com', timeout=5)
+        return True
+    except request.URLError as err:
+        return False
+
 if seconds_waited >= TIMEOUT_SECS:
     print("Timeout exceeded 1200s. exiting...")
     sys.exit(1)
@@ -40,14 +49,18 @@ else:
     localdb = header.get_localdb()
 
     for package in get_new_packages():
-        if package.isspace(): continue
-        if package.startswith("[remove]") and len(localdb.search(package.replace("[remove]", "").replace(" ", ""))) > 0:
-            print("    - Removing base package: " + package.replace("[remove]", "").replace(" ", ""))
-            os.system("pacman -Rdd --noconfirm " + package.replace("[remove]", "").replace(" ", ""))
+        if internet_on():
+            if package.isspace(): continue
+            if package.startswith("[remove]") and len(localdb.search(package.replace("[remove]", "").replace(" ", ""))) > 0:
+                print("    - Removing base package: " + package.replace("[remove]", "").replace(" ", ""))
+                os.system("pacman -Rdd --noconfirm " + package.replace("[remove]", "").replace(" ", ""))
 
-        if len(localdb.search(package)) > 0: continue
+            if len(localdb.search(package)) > 0: continue
 
-        print("    - Installing new base package: " + package)
-        os.system("pacman -S --noconfirm " + package)
+            print("    - Installing new base package: " + package)
+            os.system("pacman -S --noconfirm " + package)
+        else
+            print("Could not update base package(s) because you have no internet connection.")
+            sys.exit(1)
 
 print("SDesk is up-to-date.")
