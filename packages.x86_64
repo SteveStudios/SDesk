@@ -80,7 +80,6 @@ ntfs-3g
 nvme-cli
 open-iscsi
 openconnect
-openssh
 openvpn
 partclone
 parted
@@ -102,7 +101,6 @@ sg3_utils
 smartmontools
 sof-firmware
 squashfs-tools
-sudo
 syslinux
 systemd-resolvconf
 tcpdump
@@ -180,7 +178,6 @@ libreoffice-still
 swirl
 geary
 nano
-python
 git
 gnome-terminal
 gnome-boxes
@@ -220,7 +217,7 @@ adwaita-qt6
 linux-zen
 linux-zen-headers
 
-# For VMs
+# For VMsselinux-refpolicy-arch
 spice-vdagent
 qemu-guest-agent
 phodav
@@ -286,7 +283,6 @@ luarocks
 lua-sec
 cvs
 mercurial
-# sdesk-sdk
 
 # Other
 fuse3

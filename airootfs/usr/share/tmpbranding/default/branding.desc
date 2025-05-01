@@ -128,7 +128,7 @@ strings:
     versionedName:       SDesk Linux
     shortVersionedName:  SDesk
     bootloaderEntryName: SDesk
-    productUrl:          https://stevestudios.ca/
+    productUrl:          https://stevestudios.net/
 
 # These images are loaded from the branding module directory.
 #
