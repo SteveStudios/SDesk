@@ -52,5 +52,6 @@ if (( EUID != 0 )); then
 	
 	rfkill block bluetooth
 	
+	sudo firecfg
 	sudo calamares
 fi
