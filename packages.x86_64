@@ -3,7 +3,12 @@ alsa-utils
 amd-ucode
 arch-install-scripts
 b43-fwcutter
+
+# Additional SDesk Packages
+archlinux-keyring
 base-selinux
+
+# Other Default Archiso Packages
 bind
 brltty
 broadcom-wl
@@ -260,16 +265,9 @@ restorecond
 selinux-alpm-hook
 pambase-selinux
 pam-selinux
-coreutils-selinux
-shadow-selinux
 cronie-selinux
 sudo-selinux
-util-linux-selinux
-systemd-selinux
-logrotate-selinux
-dbus-selinux
 openssh-selinux
-findutils-selinux
 iproute2-selinux
 psmisc-selinux
 selinux-refpolicy-arch
