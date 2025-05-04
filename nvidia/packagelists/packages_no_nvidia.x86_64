@@ -56,7 +56,7 @@ linux-firmware
 linux-firmware-bnx2x
 linux-firmware-liquidio
 linux-firmware-marvell
-linux-firmware-`me`llanox
+linux-firmware-mellanox
 linux-firmware-nfp
 linux-firmware-qlogic
 livecd-sounds
