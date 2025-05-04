@@ -21,9 +21,9 @@ fi
 
 mkdir ./airootfs/etc/default
 
-cp ./nvidia/grub/grub_no_nvidia ./airootfs/etc/default/grub
-cp ./nvidia/mkinitcpio/mkinitcpio_no_nvidia.conf ./airootfs/etc/mkinitcpio.conf
-cp ./nvidia/packagelists/packages_no_nvidia.x86_64 ./packages.x86_64
+cp ./nvidia/grub/grub_with_nvidia ./airootfs/etc/default/grub
+cp ./nvidia/mkinitcpio/mkinitcpio_with_nvidia.conf ./airootfs/etc/mkinitcpio.conf
+cp ./nvidia/packagelists/packages_with_nvidia.x86_64 ./packages.x86_64
 
 mkarchiso -v -w ./work -o ./out ./
 
