@@ -41,9 +41,12 @@ if (( $EUID == 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
 	sudo dconf update
 
+	systemctl start firewalld.service | grep "hide_the-output"
+	systemctl enable firewalld.service | grep "hide_the-output"
+
 	systemctl start NetworkManager.service | grep "hide_the-output"
 	systemctl enable NetworkManager.service | grep "hide_the-output"
-		
+
 	systemctl start gdm | grep "hide_the-output"
 	systemctl enable gdm | grep "hide_the-output"
 fi

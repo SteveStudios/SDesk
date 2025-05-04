@@ -13,6 +13,7 @@ dconf write /org/gnome/shell/extensions/user-theme/name "'Default'"
 sudo dconf update
 	
 systemctl enable cups.service | grep "hide_the-output"
+systemctl enable firewalld.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"
 systemctl enable gdm | grep "hide_the-output"
 
