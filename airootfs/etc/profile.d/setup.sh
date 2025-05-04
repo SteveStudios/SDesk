@@ -11,7 +11,6 @@ if (( EUID != 0 )); then
 	gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 	gnome-extensions enable dash-to-dock@micxgx.gmail.com
 	gnome-extensions disable gtk4-ding@smedius.gitlab.com
-	gnome-extensions enable just-perfection-desktop@just-perfection
 	gnome-extensions enable light-style@gnome-shell-extensions.gcampax.github.com
 	gnome-extensions enable tiling-assistant@leleat-on-github
 	gnome-extensions enable arch-update@RaphaelRochet
@@ -29,10 +28,6 @@ if (( EUID != 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.5
 	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
-
-	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
-	dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
-	dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
 	
 	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'

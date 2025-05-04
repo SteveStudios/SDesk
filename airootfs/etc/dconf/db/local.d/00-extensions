@@ -1,5 +1,5 @@
 [org/gnome/shell]
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'gtk4-ding@smedius.gitlab.com', 'just-perfection-desktop@just-perfection', 'light-style@gnome-shell-extensions.gcampax.github.com', 'tiling-assistant@leleat-on-github', 'arch-update@RaphaelRochet', 'add-to-desktop@tommimon.github.com', 'emoji-copy@felipeftn']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'gtk4-ding@smedius.gitlab.com', 'light-style@gnome-shell-extensions.gcampax.github.com', 'tiling-assistant@leleat-on-github', 'arch-update@RaphaelRochet', 'add-to-desktop@tommimon.github.com', 'emoji-copy@felipeftn']
 welcome-dialog-last-shown-version='4294967295'
 favorite-apps=['swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']
 
@@ -19,11 +19,6 @@ disable-overview-on-startup=true
 dock-fixed=false
 transparency-mode='FIXED'
 background-opacity=0.5
-
-[org/gnome/shell/extensions/just-perfection]
-workspace-switcher-should-show=true
-workspace-switcher-size=10
-startup-status=0
 
 [org/gnome/desktop/interface]
 cursor-theme='SShell'

@@ -8,7 +8,6 @@ gnome-extensions enable add-to-desktop@tommimon.github.com
 gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 gnome-extensions disable gtk4-ding@smedius.gitlab.com
-gnome-extensions enable just-perfection-desktop@just-perfection
 gnome-extensions enable light-style@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable tiling-assistant@leleat-on-github
 gnome-extensions enable arch-update@RaphaelRochet
@@ -27,10 +26,6 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.5
 dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
 dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
 
-dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-should-show true
-dconf write /org/gnome/shell/extensions/just-perfection/workspace-switcher-size 10
-dconf write /org/gnome/shell/extensions/just-perfection/startup-status 0
-	
 gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
@@ -42,15 +37,4 @@ gsettings set org.gnome.shell favorite-apps "['swirl.desktop', 'org.gnome.Geary.
 xdg-settings set default-web-browser swirl.desktop
 
 sudo chmod -R 755 /etc/profile.d
-sudo chmod -R 777 /usr/share/gnome-shell/extensions
-
-sudo /usr/lib/gnome-initial-setup &> /tmp/gnome_initial_setup.log &
-
-PROCESS_PID=$!
-
-while ! sudo grep -q "No GDM connection; not initiating login" /tmp/gnome_initial_setup.log; do
-    sleep 0.1
-done
-
-sudo pkill -f /usr/lib/gnome-initial-setup
-sudo pacman -Rns --noconfirm gnome-initial-setup && sudo rm -rf /usr/bin/setup-final.sh && sudo rm -rf /etc/gdm/custom.conf && sudo mv /etc/gdm/tmpcustom.conf /etc/gdm/custom.conf && sudo rm -rf /etc/xdg/autostart/sdesk-welcome.desktop && killall -3 gnome-shell
+sudo chmod -R 755 /usr/share/gnome-shell/extensions
