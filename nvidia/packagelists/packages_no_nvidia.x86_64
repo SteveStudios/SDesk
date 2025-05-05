@@ -172,7 +172,6 @@ calamares
 # Device Security Utilities
 fwupd
 hardened_malloc
-firejail
 
 # Powers the splash screen shown on boot
 plymouth

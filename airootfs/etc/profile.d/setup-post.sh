@@ -1,11 +1,7 @@
 #!/bin/bash
 
-if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ] && [ ! -f "/usr/bin/setup-final.sh" ]; then
-	sudo rm -rf /etc/profile.d/setup-post.sh
-	sudo rm -rf /var/lib/AccountsService/users/live
-
-	sudo userdel -f live
-
+if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
+	sudo rm -rf /etc/profile.d/setup-post.shz
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
@@ -43,6 +39,4 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
  	gsettings set org.gnome.shell favorite-apps "['calamares.desktop', 'swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']"
 
 	xdg-settings set default-web-browser swirl.desktop
-
-	sudo firecfg
 fi

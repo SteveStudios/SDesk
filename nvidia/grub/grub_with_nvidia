@@ -3,8 +3,8 @@
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=0
 GRUB_DISTRIBUTOR="SDesk"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 udev.log-priority=3 nvme_load=yes splash nvidia-drm.modeset=1"
-GRUB_CMDLINE_LINUX="console=ttyS0"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet loglevel=3 udev.log-priority=3 nvme_load=yes splash lsm=landlock,lockdown,yama,integrity,selinux,bpf nvidia-drm.modeset=1"
+GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
@@ -14,7 +14,7 @@ GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 
 # Set to 'countdown' or 'hidden' to change timeout behavior,
 # press ESC key to display menu.
-GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT_STYLE=countdown
 
 # Uncomment to use basic console
 GRUB_TERMINAL_INPUT=console

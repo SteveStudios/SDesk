@@ -46,7 +46,6 @@ if (( EUID != 0 )); then
 	sudo systemctl start bluetooth
 	
 	rfkill block bluetooth
-	
-	sudo firecfg
+
 	sudo calamares
 fi
