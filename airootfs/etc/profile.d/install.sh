@@ -35,7 +35,6 @@ if (( $EUID == 0 )); then
 	dconf reset -f /org/gnome/
 
 	sudo chmod -R 777 /usr/share/gnome-shell/extensions
-	sudo chmod 777 /usr/bin/setup-final.sh
 	
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
 	dconf write /org/gnome/shell/extensions/dash-to-dock/disable-overview-on-startup true
