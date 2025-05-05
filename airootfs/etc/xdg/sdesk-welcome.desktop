@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Welcome
-Exec=/usr/bin/setup-final.sh
-OnlyShowIn=GNOME;
