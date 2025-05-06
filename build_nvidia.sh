@@ -25,7 +25,7 @@ cp ./nvidia/grub/grub_with_nvidia ./airootfs/etc/default/grub
 cp ./nvidia/mkinitcpio/mkinitcpio_with_nvidia.conf ./airootfs/etc/mkinitcpio.conf
 cp ./nvidia/packagelists/packages_with_nvidia.x86_64 ./packages.x86_64
 
-mkarchiso -v -w ./work -o ./out ./
+mkarchiso -v -w ./work_nvidia -o ./out_nvidia ./
 
 if [ -d "./airootfs/etc/default" ]; then
     rm -rf ./airootfs/etc/default

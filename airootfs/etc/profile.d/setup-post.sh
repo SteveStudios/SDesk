@@ -5,9 +5,11 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	
 	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-l.jpg
 	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jpg
+	sudo rm -rf /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
 	
 	sudo mv /usr/share/backgrounds/gnome/adwaita-l-original.jpg /usr/share/backgrounds/gnome/adwaita-l.jpg
 	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita-d.jpg 
+	sudo mv /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic-original.svg /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
 
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
