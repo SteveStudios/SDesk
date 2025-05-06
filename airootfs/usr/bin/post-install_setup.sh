@@ -27,7 +27,7 @@ dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed false
 dconf write /org/gnome/shell/extensions/dash-to-dock/transparency-mode "'FIXED'"
 dconf write /org/gnome/shell/extensions/dash-to-dock/background-opacity 0.5
 	
-gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+gsettings set org.gnome.desktop.interface icon-theme 'Marwaita-Cyan'
 gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
 
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'

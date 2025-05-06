@@ -2,9 +2,13 @@
 
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
 	sudo rm -rf /etc/profile.d/setup-post.sh
-	sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
+	
+	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-l.jpg
+	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jpg
+	
+	sudo mv /usr/share/backgrounds/gnome/adwaita-l-original.jpg /usr/share/backgrounds/gnome/adwaita-l.jpg
+	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita.jpg 
 
-	sudo mv /usr/share/gnome-shell/original-gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
@@ -33,7 +37,7 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
     dconf write /org/gnome/shell/extensions/dash-to-dock/autohide true
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide true
 
-	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita-Cyan'
 	gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
 	
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'

@@ -29,7 +29,7 @@ if (( EUID != 0 )); then
 	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
 	
-	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita-Cyan'
 	gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
 	
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'

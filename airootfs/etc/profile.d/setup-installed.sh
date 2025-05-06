@@ -31,7 +31,7 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	dconf write /org/gnome/shell/extensions/dash-to-dock/autohide false
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide false
 
-	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita-Cyan'
 	gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
 	
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'

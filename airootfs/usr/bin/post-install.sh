@@ -6,7 +6,7 @@ sudo rm -rf /usr/share/tmpcalamares.desktop
 sudo rm -rf /usr/share/tmpbranding
 sudo rm -rf /usr/share/tmpmodules
 
-gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+gsettings set org.gnome.desktop.interface icon-theme 'Marwaita-Cyan'
 gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
 
 gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
