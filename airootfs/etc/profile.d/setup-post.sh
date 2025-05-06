@@ -1,7 +1,10 @@
 #!/bin/bash
 
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
-	sudo rm -rf /etc/profile.d/setup-post.shz
+	sudo rm -rf /etc/profile.d/setup-post.sh
+	sudo rm -rf /usr/share/gnome-shell/gnome-shell-theme.gresource
+
+	sudo mv /usr/share/gnome-shell/original-gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
@@ -31,6 +34,8 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
     dconf write /org/gnome/shell/extensions/dash-to-dock/intellihide true
 
 	gsettings set org.gnome.desktop.interface icon-theme 'Marwaita'
+	gsettings set org.gnome.desktop.interface gtk-theme 'Marwaita'
+	
 	gsettings set org.gnome.desktop.interface cursor-theme 'SShell'
 
 	gsettings set org.gnome.desktop.background picture-uri file:////usr/share/pixmaps/sd-bg-default.png

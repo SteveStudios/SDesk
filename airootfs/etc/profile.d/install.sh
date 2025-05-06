@@ -28,7 +28,6 @@ if (( $EUID == 0 )); then
 	yes | pacman -R epiphany | grep "hide_the-output"
 	yes | pacman -R gnome-console | grep "hide_the-output"
 	yes | pacman -R gnome-software | grep "hide_the-output"
-	yes | pacman -Rdd qt6-wayland | grep "hide_the-output"
 
 	sudo chmod a+x /usr/bin/launch_calamares
 

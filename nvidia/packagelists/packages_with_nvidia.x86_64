@@ -141,10 +141,12 @@ mplayer
 power-profiles-daemon
 
 # Windowing Systems, their Extensions, Utilities, and GUI Toolkits (Wayland, XWayland, glfw, glew, etc.)
-egl-wayland
-glfw-wayland
 wayland
 wayland-protocols
+qt6-wayland 
+qt5-wayland
+egl-wayland
+glfw-wayland
 xorg-xwayland
 glew
 xorg-xrandr
