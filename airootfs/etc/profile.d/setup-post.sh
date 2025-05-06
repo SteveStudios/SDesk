@@ -7,7 +7,7 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jpg
 	
 	sudo mv /usr/share/backgrounds/gnome/adwaita-l-original.jpg /usr/share/backgrounds/gnome/adwaita-l.jpg
-	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita.jpg 
+	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita-d.jpg 
 
 	sudo mv /etc/tmpsudoers /etc/sudoers
 

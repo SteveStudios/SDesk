@@ -30,9 +30,6 @@ if (( $EUID == 0 )); then
 	yes | pacman -R gnome-software | grep "hide_the-output"
 
 	sudo chmod a+x /usr/bin/launch_calamares
-
-	dconf reset -f /org/gnome/
-
 	sudo chmod -R 777 /usr/share/gnome-shell/extensions
 	
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
