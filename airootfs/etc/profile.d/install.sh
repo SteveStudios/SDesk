@@ -42,6 +42,9 @@ if (( $EUID == 0 )); then
 	systemctl start NetworkManager.service | grep "hide_the-output"
 	systemctl enable NetworkManager.service | grep "hide_the-output"
 
+	systemctl start apparmor.service | grep "hide_the-output"
+	systemctl enable apparmor.service | grep "hide_the-output"
+
 	systemctl start gdm | grep "hide_the-output"
 	systemctl enable gdm | grep "hide_the-output"
 fi

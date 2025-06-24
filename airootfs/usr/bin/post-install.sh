@@ -17,6 +17,7 @@ sudo dconf update
 systemctl enable cups.service | grep "hide_the-output"
 systemctl enable firewalld.service | grep "hide_the-output"
 systemctl enable NetworkManager.service | grep "hide_the-output"
+systemctl enable apparmor.service | grep "hide_the-output"
 systemctl enable gdm | grep "hide_the-output"
 
 sudo rm -rf /usr/bin/post-install.sh
