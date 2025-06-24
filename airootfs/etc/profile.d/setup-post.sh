@@ -11,6 +11,17 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita-d.jpg 
 	sudo mv /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic-original.svg /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
 
+	sudo rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
+	sudo rm -rf /usr/share/xsessions/gnome-classic.desktop
+
+	sudo rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
+	sudo rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
+
+	sudo sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
+	sudo sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
+
+	sudo aa-enforce /etc/apparmor.d/*
+
 	sudo mv /etc/tmpsudoers /etc/sudoers
 
 	gsettings set org.gnome.shell welcome-dialog-last-shown-version '4294967295'
@@ -50,15 +61,4 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
  	gsettings set org.gnome.shell favorite-apps "['calamares.desktop', 'swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']"
 
 	xdg-settings set default-web-browser swirl.desktop
-
-	sudo rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
-	sudo rm -rf /usr/share/xsessions/gnome-classic.desktop
-
-	sudo rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
-	sudo rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
-
-	sudo sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
-	sudo sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
-
-	sudo aa-enforce /etc/apparmor.d/*
 fi
