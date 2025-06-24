@@ -34,9 +34,11 @@ sudo rm -rf ./out
 sudo ./build.sh
 ```
 
-Again, if you are rebuilding with NVIDIA driver support, replace the last command with this one:
+Again, if you are rebuilding with NVIDIA driver support, run these commands instead:
 
 ```
+sudo rm -rf ./work_nvidia
+sudo rm -rf ./out_nvidia
 sudo ./build_nvidia.sh
 ```
 
@@ -46,14 +48,14 @@ sudo ./build_nvidia.sh
 Run the following command to test the SDesk disk image with QEMU emulating UEFI and using GRUB:
  
 ```
-run_archiso -u -i "ISO NAME GOES HERE"
+run_archiso -u -i "ISO PATH GOES HERE"
 ```
 
 ### BIOS
 Run the following command to test the SDesk disk image with QEMU emulating BIOS and using SysLinux:
  
 ```
-run_archiso -i "ISO NAME GOES HERE"
+run_archiso -i "ISO PATH GOES HERE"
 ```
 
 [Archiso man page](https://wiki.archlinux.org/title/archiso)
