@@ -43,12 +43,14 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 
 	xdg-settings set default-web-browser swirl.desktop
 
-	rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
-	rm -rf /usr/share/xsessions/gnome-classic.desktop
+	sudo rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
+	sudo rm -rf /usr/share/xsessions/gnome-classic.desktop
 
-	rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
-	rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
+	sudo rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
+	sudo rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
 
-	sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
-	sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
+	sudo sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
+	sudo sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
+
+	sudo aa-enforce /etc/apparmor.d/*
 fi
