@@ -41,6 +41,15 @@ if (( EUID != 0 )); then
 
 	xdg-settings set default-web-browser swirl.desktop
 
+	rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
+	rm -rf /usr/share/xsessions/gnome-classic.desktop
+
+	rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
+	rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
+
+	sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
+	sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
+
 	sudo systemctl start cups.service
 	sudo systemctl enable cups.service
 	

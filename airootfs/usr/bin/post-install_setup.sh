@@ -37,4 +37,13 @@ gsettings set org.gnome.shell favorite-apps "['swirl.desktop', 'org.gnome.Geary.
 		
 xdg-settings set default-web-browser swirl.desktop
 	
+rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
+rm -rf /usr/share/xsessions/gnome-classic.desktop
+
+rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
+rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
+
+sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
+sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
+
 sudo rm -rf usr/bin/post-install_setup.sh

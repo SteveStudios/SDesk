@@ -42,4 +42,13 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
  	gsettings set org.gnome.shell favorite-apps "['calamares.desktop', 'swirl.desktop', 'org.gnome.Geary.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Music.desktop', 'org.gnome.Nautilus.desktop', 'octopi.desktop']"
 
 	xdg-settings set default-web-browser swirl.desktop
+
+	rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
+	rm -rf /usr/share/xsessions/gnome-classic.desktop
+
+	rm -rf /usr/share/wayland-sessions/gnome-classic-wayland.desktop
+	rm -rf /usr/share/wayland-sessions/gnome-classic.desktop
+
+	sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
+	sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
 fi
