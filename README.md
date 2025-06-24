@@ -18,6 +18,12 @@ Run the following command to build the SDesk disk image:
 sudo ./build.sh
 ```
 
+If you want to build an image with NVIDIA driver support, run this command instead:
+
+```
+sudo ./build_nvidia.sh
+```
+
 ### Recompiling the Disk Image
 
 Run the following commands to rebuild the SDesk disk image:
@@ -26,6 +32,12 @@ Run the following commands to rebuild the SDesk disk image:
 sudo rm -rf ./work
 sudo rm -rf ./out
 sudo ./build.sh
+```
+
+Again, if you are rebuilding with NVIDIA driver support, replace the last command with this one:
+
+```
+sudo ./build_nvidia.sh
 ```
 
 ## Testing
