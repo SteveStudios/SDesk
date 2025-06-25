@@ -224,7 +224,7 @@ adwaita-qt6
 linux-zen
 linux-zen-headers
 
-# For VMsselinux-refpolicy-arch
+# For VMs
 spice-vdagent
 qemu-guest-agent
 phodav
