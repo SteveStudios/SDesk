@@ -52,5 +52,43 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	sudo sed -i 's/#write-cache/write-cache/g' /etc/apparmor/parser.conf
 	sudo sed -i 's/#Optimize=compress-fast/Optimize=compress-fast/g' /etc/apparmor/parser.conf
 
-	sudo aa-enforce /etc/apparmor.d/*
+    sudo aa-enforce /etc/apparmor.d/bin.ping
+    sudo aa-enforce /etc/apparmor.d/busybox
+    sudo aa-enforce /etc/apparmor.d/buildah
+    sudo aa-enforce /etc/apparmor.d/ch-checkns
+    sudo aa-enforce /etc/apparmor.d/ch-run
+    sudo aa-enforce /etc/apparmor.d/crun
+    sudo aa-enforce /etc/apparmor.d/devhelp
+    sudo aa-enforce /etc/apparmor.d/linux-sandbox
+    sudo aa-enforce /etc/apparmor.d/lxc-attach
+    sudo aa-enforce /etc/apparmor.d/lxc-create
+    sudo aa-enforce /etc/apparmor.d/lxc-destroy
+    sudo aa-enforce /etc/apparmor.d/lxc-execute
+    sudo aa-enforce /etc/apparmor.d/lxc-stop
+    sudo aa-enforce /etc/apparmor.d/lxc-unshare
+    sudo aa-enforce /etc/apparmor.d/lxc-usernsexec
+    sudo aa-enforce /etc/apparmor.d/mmdebstrap
+    sudo aa-enforce /etc/apparmor.d/php-fpm
+    sudo aa-enforce /etc/apparmor.d/podman
+    sudo aa-enforce /etc/apparmor.d/rootlesskit
+    sudo aa-enforce /etc/apparmor.d/rpm
+    sudo aa-enforce /etc/apparmor.d/runc
+    sudo aa-enforce /etc/apparmor.d/samba-bgqd
+    sudo aa-enforce /etc/apparmor.d/samba-dcerpcd
+    sudo aa-enforce /etc/apparmor.d/samba-rpcd
+    sudo aa-enforce /etc/apparmor.d/samba-rpcd-classic
+    sudo aa-enforce /etc/apparmor.d/samba-rpcd-spoolss
+    sudo aa-enforce /etc/apparmor.d/sbin.klogd
+    sudo aa-enforce /etc/apparmor.d/sbin.syslogd
+    sudo aa-enforce /etc/apparmor.d/sbin.syslog-ng
+    sudo aa-enforce /etc/apparmor.d/slirp4netns
+    sudo aa-enforce /etc/apparmor.d/stress-ng
+    sudo aa-enforce /etc/apparmor.d/systemd-coredump
+    sudo aa-enforce /etc/apparmor.d/toybox
+    sudo aa-enforce /etc/apparmor.d/unix-chkpwd
+    sudo aa-enforce /etc/apparmor.d/unprivileged_userns
+    sudo aa-enforce /etc/apparmor.d/userbindmount
+    sudo aa-enforce /etc/apparmor.d/uwsgi-core
+    sudo aa-enforce /etc/apparmor.d/vpnns
+    sudo aa-enforce /etc/apparmor.d/zgrep
 fi
