@@ -218,7 +218,8 @@ networkmanager
 
 # Qt Utilities
 qt6-5compat
-adwaita-qt6
+kvantum
+qqc2-desktop-style
 
 # Default Kernel
 linux-zen
