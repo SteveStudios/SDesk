@@ -220,6 +220,7 @@ networkmanager
 qt6-5compat
 kvantum
 qqc2-desktop-style
+qt6-multimedia
 
 # Default Kernel
 linux-zen
