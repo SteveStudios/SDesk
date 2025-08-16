@@ -130,6 +130,7 @@ zsh
 
 # GNOME and its Utilities
 gnome
+gnome-shell-extensions
 gst-plugin-pipewire
 gst-plugins-good
 gnome-initial-setup
