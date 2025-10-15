@@ -4,6 +4,8 @@ if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profi
 	sudo rm -rf /etc/profile.d/setup-post.sh
 	
 	sudo rm -rf /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
+
+    sudo rm -rf /usr/share/gnome-background-properties/adwaita.xml
 	
 	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-l.jxl
 	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jxl
