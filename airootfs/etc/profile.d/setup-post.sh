@@ -3,12 +3,11 @@
 if (( EUID != 0 )) && [ ! -f "/etc/profile.d/install.sh" ] && [ ! -f "/etc/profile.d/setup.sh" ]; then
 	sudo rm -rf /etc/profile.d/setup-post.sh
 	
-	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-l.jpg
-	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jpg
 	sudo rm -rf /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
 	
-	sudo mv /usr/share/backgrounds/gnome/adwaita-l-original.jpg /usr/share/backgrounds/gnome/adwaita-l.jpg
-	sudo mv /usr/share/backgrounds/gnome/adwaita-d-original.jpg /usr/share/backgrounds/gnome/adwaita-d.jpg 
+	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-l.jxl
+	sudo rm -rf /usr/share/backgrounds/gnome/adwaita-d.jxl
+
 	sudo mv /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic-original.svg /usr/share/icons/Adwaita/symbolic/places/start-here-symbolic.svg
 
 	sudo rm -rf /usr/share/xsessions/gnome-classic-xorg.desktop
