@@ -135,6 +135,7 @@ gst-plugin-pipewire
 gst-plugins-good
 gnome-initial-setup
 fprintd
+gnome-software-appstream-git
 
 # SShell and its Utilities
 sshell
@@ -189,7 +190,6 @@ nano
 git
 gnome-terminal
 gnome-boxes
-octopi
 
 # Flatpak Utilities
 flatpak
@@ -274,3 +274,4 @@ lib32-vulkan-radeon
 # Other
 fuse3
 fuse-zip
+packagekit

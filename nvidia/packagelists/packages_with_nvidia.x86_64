@@ -135,6 +135,7 @@ gst-plugin-pipewire
 gst-plugins-good
 gnome-initial-setup
 fprintd
+gnome-software-appstream-git
 
 # SShell and its Utilities
 sshell
@@ -189,7 +190,6 @@ nano
 git
 gnome-terminal
 gnome-boxes
-octopi
 
 # Flatpak Utilities
 flatpak
@@ -216,7 +216,7 @@ system-config-printer
 
 # Network Utilities
 networkmanager
-
+gnome-software-appstream-git
 # Qt Utilities
 qt6-5compat
 kvantum
@@ -270,6 +270,7 @@ lib32-vulkan-icd-loader
 # Other
 fuse3
 fuse-zip
+packagekit
 
 # NVIDIA GPU Drivers
 nvidia-dkms
