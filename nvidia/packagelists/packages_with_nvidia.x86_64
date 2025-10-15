@@ -136,6 +136,7 @@ gst-plugins-good
 gnome-initial-setup
 fprintd
 gnome-software-appstream-git
+gnome-software-packagekit-plugin-appstream-git
 
 # SShell and its Utilities
 sshell
