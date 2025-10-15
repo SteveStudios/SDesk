@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper deleted="false">
+    <name>Current SDesk Background included on new installs.</name>
+    <name xml:lang="de">Firmenhintergrund</name>
+    <filename>/usr/share/pixmaps/sd-bg-default.png</filename>
+    <filename-dark>/usr/share/pixmaps/sd-bg-default-dark.png</filename-dark>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+</wallpapers>
